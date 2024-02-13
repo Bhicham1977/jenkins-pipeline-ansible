@@ -30,7 +30,7 @@ pipeline {
             environment {
                 SUDOPASS = credentials('sudopass')
             }
-            agent { docker { image 'registry.gitlab.com/bhicham77/docker-ansible-robconnolly:1' } }
+            agent { docker { image 'registry.gitlab.com/bhicham77/docker-ansible-robconnolly:latest' } }
             stages {
                stage("Verify ansible playbook syntax") {
                    steps {
